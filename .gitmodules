@@ -1,0 +1,3 @@
+[submodule "koraapp/lib/forge-std"]
+	path = koraapp/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
