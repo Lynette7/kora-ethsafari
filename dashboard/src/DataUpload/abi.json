@@ -1,0 +1,90 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "deviceSerialNumber",
+                "type": "string"
+            }
+        ],
+        "name": "datarecorded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "plateNumber",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "deviceSerialNumber",
+                "type": "string"
+            }
+        ],
+        "name": "userCreated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "plateNumber",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "deviceSerialNumber",
+                "type": "string"
+            }
+        ],
+        "name": "create_user",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "deviceSerialNumber",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "speed",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "location",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "videoID",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "imageID",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "alcoholLevel",
+                "type": "uint256"
+            }
+        ],
+        "name": "set_data",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

@@ -57,38 +57,42 @@ const koraData = [
 ];
 
 const Dashboard = () => {
-  const [data, setData] = useState(koraData);
+  const [data, setData] = useState([]);
   const [currentTab, setCurrentTab] = useState('speed');
 
+  // Simulate real-time data feed
   useEffect(() => {
-    setData(koraData);
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < koraData.length) {
+        setData(prevData => [...prevData, koraData[index], koraData[index + 1]].slice(0, index + 2));
+        index += 2;
+      } else {
+        clearInterval(interval);
+      }
+    }, 2000); // Feed two records every 2 seconds
+    
+    return () => clearInterval(interval);
   }, []);
 
-  const renderOverviewCards = () => {
-    const avgSpeed = data.reduce((acc, curr) => acc + curr.speed, 0) / data.length;
-    const avgFuelConsumption = data.reduce((acc, curr) => acc + curr.fuelConsumption, 0) / data.length;
-    const alcoholDetections = data.filter(item => item.alcoholLevel > 0).length;
-
-    const cards = [
-      { title: 'Average Speed', value: `${avgSpeed.toFixed(2)} km/h`, icon: '🌬️' },
-      { title: 'Avg Fuel Consumption', value: `${avgFuelConsumption.toFixed(2)} L/100km`, icon: '💧' },
-      { title: 'Alcohol Detections', value: alcoholDetections, icon: '🌡️' }
-    ];
-
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        {cards.map((card, index) => (
-          <div key={index} className="bg-white p-4 rounded shadow">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="text-sm font-medium text-gray-700">{card.title}</h3>
-              <span>{card.icon}</span>
-            </div>
-            <div className="text-2xl font-bold text-gray-900">{card.value}</div>
-          </div>
-        ))}
+  function renderOverviewCards(data) {
+    // Assuming data is an array and we're reducing over it
+    const overview = data.reduce((acc, item) => {
+      // Ensure item is defined and has the 'speed' property
+      if (item && item.speed !== undefined) {
+        acc.push(item.speed);  // Process valid data
+      }
+      return acc;  // Accumulate valid entries
+    }, []);
+  
+    // Render your cards based on 'overview'
+    return overview.map((speed, index) => (
+      <div key={index} className="overview-card">
+        <p>Speed: {speed}</p>
       </div>
-    );
-  };
+    ));
+  }
+  
 
   const renderTabs = () => {
     const tabs = ['speed', 'alcohol', 'fuel', 'data'];
@@ -116,7 +120,7 @@ const Dashboard = () => {
       case 'fuel':
         return createFuelChart();
       case 'data':
-        return createDataTable(); // Added data table rendering
+        return createDataTable();
       default:
         return null;
     }
@@ -153,7 +157,7 @@ const Dashboard = () => {
         </div>
       </div>
     );
-  };
+  }
 
   const createAlcoholChart = () => {
     const alcoholData = data.map(item => item.alcoholLevel);
@@ -237,11 +241,7 @@ const Dashboard = () => {
                 <td className="px-4 py-2 border">{item.plateNumber}</td>
                 <td className="px-4 py-2 border">{item.speed}</td>
                 <td className="px-4 py-2 border">{item.location}</td>
-                <td className="px-4 py-2 border">
-                  <span className={`px-2 py-1 rounded ${item.alcoholLevel > 0 ? 'bg-red-500 text-white' : 'bg-gray-200'}`}>
-                    {item.alcoholLevel}
-                  </span>
-                </td>
+                <td className="px-4 py-2 border">{item.alcoholLevel}</td>
                 <td className="px-4 py-2 border">{item.fuelConsumption}</td>
               </tr>
             ))}
@@ -252,8 +252,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-4xl font-bold text-[#17726d] mb-6">KORA INSUTECH</h1>
+    <div>
       {renderOverviewCards()}
       {renderTabs()}
       {renderTabContent()}

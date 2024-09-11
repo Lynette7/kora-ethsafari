@@ -1,0 +1,103 @@
+[
+    {
+      "plateNumber": "ABC123",
+      "deviceSerialNumber": "SN123456",
+      "speed": 80,
+      "location": "GPS_COORDINATES_1",
+      "videoID": "VID123",
+      "imageID": "IMG123",
+      "alcoholLevel": 0.02,
+      "fuelConsumption": 6.5
+    },
+    {
+      "plateNumber": "XYZ789",
+      "deviceSerialNumber": "SN654321",
+      "speed": 95,
+      "location": "GPS_COORDINATES_2",
+      "videoID": "VID456",
+      "imageID": "IMG456",
+      "alcoholLevel": 0.05,
+      "fuelConsumption": 7.1
+    },
+    {
+      "plateNumber": "DEF456",
+      "deviceSerialNumber": "SN789123",
+      "speed": 70,
+      "location": "GPS_COORDINATES_3",
+      "videoID": "VID789",
+      "imageID": "IMG789",
+      "alcoholLevel": 0.01,
+      "fuelConsumption": 5.9
+    },
+    {
+      "plateNumber": "GHI012",
+      "deviceSerialNumber": "SN456789",
+      "speed": 85,
+      "location": "GPS_COORDINATES_4",
+      "videoID": "VID101",
+      "imageID": "IMG101",
+      "alcoholLevel": 0.04,
+      "fuelConsumption": 6.8
+    },
+    {
+      "plateNumber": "JKL345",
+      "deviceSerialNumber": "SN321654",
+      "speed": 60,
+      "location": "GPS_COORDINATES_5",
+      "videoID": "VID102",
+      "imageID": "IMG102",
+      "alcoholLevel": 0.00,
+      "fuelConsumption": 5.5
+    },
+    {
+      "plateNumber": "MNO678",
+      "deviceSerialNumber": "SN987654",
+      "speed": 90,
+      "location": "GPS_COORDINATES_6",
+      "videoID": "VID103",
+      "imageID": "IMG103",
+      "alcoholLevel": 0.03,
+      "fuelConsumption": 7.3
+    },
+    {
+      "plateNumber": "PQR901",
+      "deviceSerialNumber": "SN123987",
+      "speed": 75,
+      "location": "GPS_COORDINATES_7",
+      "videoID": "VID104",
+      "imageID": "IMG104",
+      "alcoholLevel": 0.01,
+      "fuelConsumption": 6.2
+    },
+    {
+      "plateNumber": "STU234",
+      "deviceSerialNumber": "SN321987",
+      "speed": 65,
+      "location": "GPS_COORDINATES_8",
+      "videoID": "VID105",
+      "imageID": "IMG105",
+      "alcoholLevel": 0.02,
+      "fuelConsumption": 5.7
+    },
+    {
+      "plateNumber": "VWX567",
+      "deviceSerialNumber": "SN987123",
+      "speed": 100,
+      "location": "GPS_COORDINATES_9",
+      "videoID": "VID106",
+      "imageID": "IMG106",
+      "alcoholLevel": 0.06,
+      "fuelConsumption": 8.1
+    },
+    {
+      "plateNumber": "YZA890",
+      "deviceSerialNumber": "SN654987",
+      "speed": 55,
+      "location": "GPS_COORDINATES_10",
+      "videoID": "VID107",
+      "imageID": "IMG107",
+      "alcoholLevel": 0.00,
+      "fuelConsumption": 5.3
+    }
+  ]
+  
