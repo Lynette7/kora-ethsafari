@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.9;
 contract Kora {
-    // user --to help track who the device belongs to
     struct User{
         string plateNumber;
         string deviceSerialNumber;
     }
-    // create the evidence
+
     struct Record{
         uint256 id;
         string deviceSerialNumber;
