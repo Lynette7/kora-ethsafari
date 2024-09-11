@@ -7,6 +7,87 @@
       "videoID": "VID123",
       "imageID": "IMG123",
       "alcoholLevel": 2
+    },
+    {
+      "id":2,
+      "deviceSerial": "SN654321",
+      "speed": 95,
+      "location": "GPS_COORDINATES_2",
+      "videoID": "VID456",
+      "imageID": "IMG456",
+      "alcoholLevel": 5
+    },
+    {
+      "id":3,
+      "deviceSerial": "SN789123",
+      "speed": 70,
+      "location": "GPS_COORDINATES_3",
+      "videoID": "VID789",
+      "imageID": "IMG789",
+      "alcoholLevel": 1
+    },
+    {
+      "id":4,
+      "deviceSerial": "SN456789",
+      "speed": 85,
+      "location": "GPS_COORDINATES_4",
+      "videoID": "VID101",
+      "imageID": "IMG101",
+      "alcoholLevel": 4
+    },
+    {
+      "id":5,
+      "deviceSerial": "SN321654",
+      "speed": 60,
+      "location": "GPS_COORDINATES_5",
+      "videoID": "VID102",
+      "imageID": "IMG102",
+      "alcoholLevel": 0
+    },
+    {
+      "id":6,
+      "deviceSerial": "SN987654",
+      "speed": 90,
+      "location": "GPS_COORDINATES_6",
+      "videoID": "VID103",
+      "imageID": "IMG103",
+      "alcoholLevel": 3
+    },
+    {
+      "id":7,
+      "deviceSerial": "SN123987",
+      "speed": 75,
+      "location": "GPS_COORDINATES_7",
+      "videoID": "VID104",
+      "imageID": "IMG104",
+      "alcoholLevel": 1
+    },
+    {
+      "id":8,
+      "deviceSerial": "SN321987",
+      "speed": 65,
+      "location": "GPS_COORDINATES_8",
+      "videoID": "VID105",
+      "imageID": "IMG105",
+      "alcoholLevel": 2
+    },
+    {
+      "id":9,
+      "deviceSerial": "SN987123",
+      "speed": 100,
+      "location": "GPS_COORDINATES_9",
+      "videoID": "VID106",
+      "imageID": "IMG106",
+      "alcoholLevel": 6
+    },
+    {
+      "id":10,
+      "deviceSerial": "SN654987",
+      "speed": 55,
+      "location": "GPS_COORDINATES_10",
+      "videoID": "VID107",
+      "imageID": "IMG107",
+      "alcoholLevel": 0
     }
   ]
   
